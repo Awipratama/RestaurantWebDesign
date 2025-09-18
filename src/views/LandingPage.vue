@@ -14,9 +14,10 @@ export default {
 <template>
   <Navigation />
   <section class="hero">
-    <video autoplay muted loop class="w-100 h-100 hero-video">
+    <!-- <video autoplay muted loop class="w-100 h-100 hero-video">
       <source src="@/assets/img/Finish.mp4" type="video/mp4" />
-    </video>
+    </video> -->
+    <img src="@/assets/img/FotoSate.jpg" class="hero-video" alt="">
     <div class="hero-text-content-wrapper">
       <div class="hero-title">
         <h1 class="fw-bold slide01"><span class="bali">Sate Lilit</span> Bali</h1>
@@ -326,15 +327,20 @@ export default {
 .hero {
   overflow: hidden;
   color: white;
-  height: max-content;
+  height: 100vh;
+  width: 100%;
   position: relative;
 }
 .hero-video {
   box-shadow: inset 0px -10px 10px rgb(255, 255, 255) !important;
   filter: brightness(0.7);
-  width: calc(100% + 10px);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .hero-text-content-wrapper {
+  background: rgba(0, 0, 0, 0.06);
+  background: linear-gradient(90deg,rgba(0, 0, 0, 0.5) 15%, rgba(255, 255, 255, 0) 90%);
   padding: 20px 0;
   max-height: 100vh;
   width: 100%;
